@@ -368,7 +368,7 @@ judgments:
 
 * `` ∅ , "s" ⦂ `ℕ ⇒ `ℕ , "z" ⦂ `ℕ ⊢ ` "z" ⦂ `ℕ ``
 * `` ∅ , "s" ⦂ `ℕ ⇒ `ℕ , "z" ⦂ `ℕ ⊢ ` "s" ⦂ `ℕ ⇒ `ℕ ``
-* `` ∅ , "s" ⦂ `ℕ ⇒ `ℕ , "z" ⦂ `ℕ ⊢ ` ` "s" · ` "z" ⦂  `ℕ ``
+* `` ∅ , "s" ⦂ `ℕ ⇒ `ℕ , "z" ⦂ `ℕ ⊢ ` "s" · ` "z" ⦂  `ℕ ``
 * `` ∅ , "s" ⦂ `ℕ ⇒ `ℕ , "z" ⦂ `ℕ ⊢ ` "s" · (` "s" · ` "z") ⦂  `ℕ ``
 * `` ∅ , "s" ⦂ `ℕ ⇒ `ℕ ⊢ (ƛ "z" ⇒ ` "s" · (` "s" · ` "z")) ⦂  `ℕ ⇒ `ℕ ``
 * `` ∅ ⊢ ƛ "s" ⇒ ƛ "z" ⇒ ` "s" · (` "s" · ` "z")) ⦂  (`ℕ ⇒ `ℕ) ⇒ `ℕ ⇒ `ℕ ``
@@ -553,7 +553,7 @@ to variables in `Δ`.  Let's unpack the first three cases:
   the body of the abstraction.
 
 * If the term is an application, recursively rename both
-  both the function and the argument.
+  the function and the argument.
 
 The remaining cases are similar, recursing on each subterm,
 and extending the map whenever the construct introduces a
@@ -610,7 +610,7 @@ an arbitrary context, and need not be closed.
 The structure of the definition and the proof is remarkably
 close to that for renaming.  Again, we first need an extension
 lemma that allows us to extend the context when we encounter a
-binder.  Whereas renaming concerned a map from from variables
+binder.  Whereas renaming concerned a map from variables
 in one context to variables in another, substitution takes a
 map from variables in one context to _terms_ in another.
 Given a map from variables in one context map to terms over
